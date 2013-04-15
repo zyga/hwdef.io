@@ -7,3 +7,4 @@ class HardwareResource(ModelResource):
 
     class Meta:
         queryset = Hardware.objects.all()
+        allowed_methods = ['get']
