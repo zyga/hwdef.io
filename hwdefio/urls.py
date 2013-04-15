@@ -3,12 +3,14 @@ from django.contrib import admin
 from tastypie.api import Api
 
 from hwdefio.hwdef.views import Home
+from hwdefio.hwdef.api import HardwareResource
 
 
 admin.autodiscover()
 
 
 v1_api = Api(api_name='v1')
+v1_api.register(HardwareResource())
 
 
 urlpatterns = patterns('',
